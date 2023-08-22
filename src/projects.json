@@ -1,0 +1,120 @@
+{
+    "projects": [
+        {
+            "id": 0,
+            "name": "Tutti Muvi",
+            "description": "Quiz de adivinar películas usando un conjunto de pistas.",
+            "screenshot": "tutti-muvi.webp",
+            "technologies": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "React",
+                "Cloudinary"
+            ],
+            "deploy_url": "https://tutti-muvi.vercel.app/"
+        },
+        {
+            "id": 1,
+            "name": "Celebrity Like",
+            "description": "Detecta caras de celebridades en fotografías",
+            "screenshot": "celebrity-like.webp",
+            "technologies": [
+                "HTML5",
+                "Tailwind",
+                "TypeScript",
+                "Next.js"
+            ],
+            "deploy_url": "https://celebrity-like.vercel.app/",
+            "repo_url": "https://github.com/serdna1/celebrity-like"
+        },
+        {
+            "id": 2,
+            "name": "Tutti Muvi",
+            "description": "Quiz de adivinar películas usando un conjunto de pistas.",
+            "screenshot": "tutti-muvi.webp",
+            "technologies": [
+                "html",
+                "css",
+                "react"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Celebrity Like",
+            "description": "Detecta caras de celebridades en fotografías",
+            "screenshot": "celebrity-like.webp",
+            "technologies": [
+                "html",
+                "css",
+                "react"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Tutti Muvi",
+            "description": "Quiz de adivinar películas usando un conjunto de pistas.",
+            "screenshot": "tutti-muvi.webp",
+            "technologies": [
+                "html",
+                "css",
+                "react"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Celebrity Like",
+            "description": "Detecta caras de celebridades en fotografías",
+            "screenshot": "celebrity-like.webp",
+            "technologies": [
+                "html",
+                "css",
+                "react"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Tutti Muvi",
+            "description": "Quiz de adivinar películas usando un conjunto de pistas.",
+            "screenshot": "tutti-muvi.webp",
+            "technologies": [
+                "html",
+                "css",
+                "react"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Celebrity Like",
+            "description": "Detecta caras de celebridades en fotografías",
+            "screenshot": "celebrity-like.webp",
+            "technologies": [
+                "html",
+                "css",
+                "react"
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Tutti Muvi",
+            "description": "Quiz de adivinar películas usando un conjunto de pistas.",
+            "screenshot": "tutti-muvi.webp",
+            "technologies": [
+                "html",
+                "css",
+                "react"
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Celebrity Like",
+            "description": "Detecta caras de celebridades en fotografías",
+            "screenshot": "celebrity-like.webp",
+            "technologies": [
+                "html",
+                "css",
+                "react"
+            ]
+        }
+    ]
+}
