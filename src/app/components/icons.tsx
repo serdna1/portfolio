@@ -110,7 +110,7 @@ export function ScrollDownIndicator() {
 
 // ------------------------------------------
 
-export const technologies = {
+export const technologyIcons = {
   "HTML5": <DeviconHtml5 />,
   "CSS3": <DeviconCss3 />,
   "Tailwind": <LogosTailwindcssIcon />,

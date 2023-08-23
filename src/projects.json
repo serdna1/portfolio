@@ -12,7 +12,7 @@
                 "React",
                 "Cloudinary"
             ],
-            "deploy_url": "https://tutti-muvi.vercel.app/"
+            "deployUrl": "https://tutti-muvi.vercel.app/"
         },
         {
             "id": 1,
@@ -25,8 +25,8 @@
                 "TypeScript",
                 "Next.js"
             ],
-            "deploy_url": "https://celebrity-like.vercel.app/",
-            "repo_url": "https://github.com/serdna1/celebrity-like"
+            "deployUrl": "https://celebrity-like.vercel.app/",
+            "repoUrl": "https://github.com/serdna1/celebrity-like"
         },
         {
             "id": 2,

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-import { MaterialSymbolsDarkMode, MaterialSymbolsLanguage, MaterialSymbolsLightModeSharp, SolarHamburgerMenuLinear } from "./icons"
+import { MaterialSymbolsDarkMode, MaterialSymbolsLanguage, MaterialSymbolsLightModeSharp, SolarHamburgerMenuLinear } from "@/app/components/icons"
 
 export const Navbar = () => {
 

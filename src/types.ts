@@ -4,8 +4,17 @@ export interface ProjectType {
     description: string;
     screenshot: string;
     technologies: string[];
-    deploy_url: string;
-    repo_url: string;
+    deployUrl: string;
+    repoUrl: string;
+}
+
+export interface ProjectCardPropType {
+    name: string;
+    description: string;
+    screenshot: string;
+    technologies: string[];
+    deployUrl: string;
+    repoUrl: string;
 }
 
 // export interface TechnologiesType{
