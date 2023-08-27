@@ -25,7 +25,7 @@ export const About = () => {
             </a>
             <a 
               className="grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
-              href="mailto:andrescaot@gmail.com"
+              href="mailto:andres.campana.otero@gmail.com"
             >
               <LogosGoogleGmail className="text-4xl"/>
             </a>
