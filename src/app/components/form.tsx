@@ -1,14 +1,55 @@
+"use client"
+
+import { useState } from "react"
+
 export const Form = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    message: ''
+  })
+
+  const onFieldChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const value: typeof formData[keyof typeof formData] = event.target.value
+    setFormData({...formData, [event.target.id]: value})
+  }
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    const body = {
+      email: formData.email,
+      message: formData.message,
+    }
+
+    const response = await fetch('/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+
+    if(response.ok)
+      console.log('Enviado')
+    if(!response.ok)
+      console.log('Error al enviar')
+  }
+
   return (
     <article className="grow">
-      <form className="flex flex-col gap-2">
+      <form 
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-2"
+      >
         <div className="flex flex-col">
           <label htmlFor="email">
             <span className="font-semibold">
               Correo<span className="text-red-600">*</span>
             </span>
           </label>
-          <input 
+          <input
+            onChange={onFieldChange}
+            value={formData.email}
             type="email"
             id="email"
             name="email"
@@ -18,14 +59,16 @@ export const Form = () => {
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="body">
+          <label htmlFor="message">
             <span className="font-semibold">
               Mensaje<span className="text-red-600">*</span>
             </span>
           </label>
           <textarea
-            id="body"
-            name="body"
+            onChange={onFieldChange}
+            value={formData.message}
+            id="message"
+            name="message"
             required
             className="p-2 resize-none h-64 focus:outline-none border-2 border-black bg-transparent focus:bg-white"
           />

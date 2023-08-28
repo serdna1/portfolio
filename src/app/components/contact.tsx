@@ -1,3 +1,4 @@
+import { email } from "@/config/config"
 import { Form } from "./form"
 import { LogosGithubIcon, LogosGoogleGmail, LogosLinkedinIcon } from "./icons"
 
@@ -12,7 +13,7 @@ export const Contact = () => {
           </h3>
           <hr  className="border-black mb-2"/>
           <a
-            href="mailto:andres.campana.otero@gmail.com"
+            href={`mailto:${email}`}
             target="_blank"
             rel="noopener noreferrer"
             className='group hover:underline hover:text-red-500 inline-block'
@@ -21,7 +22,7 @@ export const Contact = () => {
               <div className="w-6">
                 <LogosGoogleGmail className="grayscale group-hover:grayscale-0"/>
               </div>
-              andres.campana.otero@gmail.com
+              {email}
             </div>
           </a>
           <br />

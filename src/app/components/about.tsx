@@ -1,4 +1,5 @@
 import { LogosGoogleGmail, LogosGithubIcon, LogosLinkedinIcon, MaterialSymbolsArrowCircleDownOutlineRounded } from "@/app/components/icons"
+import { email } from "@/config/config"
 
 export const About = () => {
   return (
@@ -25,7 +26,7 @@ export const About = () => {
             </a>
             <a 
               className="grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
-              href="mailto:andres.campana.otero@gmail.com"
+              href={`mailto:${email}`}
             >
               <LogosGoogleGmail className="text-4xl"/>
             </a>
