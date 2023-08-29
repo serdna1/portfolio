@@ -26,7 +26,20 @@ export const Navbar = () => {
     }
 
   }, [])
-  
+
+  useEffect(() => {
+    if (displayMenu)
+      document.body.style.overflowY = 'hidden'
+    else
+      document.body.style.overflowY = 'unset'
+  }, [displayMenu])
+
+  useEffect(() => {
+    if (lg && displayMenu)
+      document.body.style.overflowY = 'unset'
+    if (!lg && displayMenu)
+      document.body.style.overflowY = 'hidden'      
+  }, [lg])
 
   return (
     <nav className='fixed w-full z-50'>
