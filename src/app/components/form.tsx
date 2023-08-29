@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { Toaster, toast } from 'sonner'
 
 export const Form = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ export const Form = () => {
       message: formData.message,
     }
 
-    const response = await fetch('/contact', {
+    const promise = fetch('/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -29,10 +30,16 @@ export const Form = () => {
       body: JSON.stringify(body)
     })
 
-    if(response.ok)
-      console.log('Enviado')
-    if(!response.ok)
-      console.log('Error al enviar')
+    toast.promise(promise, {
+      loading: 'Enviando formulario de contacto...',
+      success: (response) => {
+        if(!response.ok)
+          throw new Error()
+        return 'Formulario de contacto enviado';
+      },
+      error: 'Error al enviar el formulario de contacto',
+    })
+
   }
 
   return (
@@ -80,6 +87,7 @@ export const Form = () => {
           Enviar
         </button>
       </form>
+      <Toaster richColors />
     </article>
   )
 }
