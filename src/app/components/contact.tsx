@@ -4,7 +4,10 @@ import { LogosGithubIcon, LogosGoogleGmail, LogosLinkedinIcon } from "./icons"
 
 export const Contact = () => {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-yellow-300 to-green-400 py-10">
+    <section
+      id="contact"
+      className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-yellow-300 to-green-400 py-10"
+    >
       <h1 className="text-5xl font-semibold">Contacto</h1>
       <div className="mt-10 md:mt-52 flex gap-16 max-w-5xl w-full px-2 flex-wrap flex-col-reverse md:flex-row">
         <article>

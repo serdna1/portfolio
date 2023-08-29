@@ -46,19 +46,22 @@ export const Navbar = () => {
                 <div className="lg:bg-transparent w-full lg:h-full absolute lg:static left-0 top-20 flex flex-col-reverse lg:flex-row justify-end min-h-screen lg:min-h-0 bg-green-300/80 backdrop-blur lg:backdrop-blur-none">
                   <div className="flex flex-col lg:flex-row items-center justify-center lg:grow">
                     <a
-                      href="#"
+                      onClick={() => !lg && setDisplayMenu(!displayMenu)}
+                      href="#about"
                       className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-semibold hover:bg-opacity-70 py-5 justify-center"
                     >
                         Sobre mí
                     </a>
                     <a
-                      href="#"
+                      onClick={() => !lg && setDisplayMenu(!displayMenu)}
+                      href="#projects"
                       className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-semibold hover:bg-opacity-70 py-5 justify-center"
                     >
                         Proyectos
                     </a>
                     <a
-                      href="#"
+                      onClick={() => !lg && setDisplayMenu(!displayMenu)}
+                      href="#contact"
                       className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-semibold hover:bg-opacity-70 py-5 justify-center"
                     >
                         Contacto
