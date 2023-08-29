@@ -30,7 +30,7 @@ export const Navbar = () => {
 
   return (
     <nav className='fixed w-full z-50'>
-        <div className='flex items-center h-20 justify-between bg-green-600 text-black bg-opacity-70 px-16'>
+        <div className='flex items-center h-20 justify-between bg-green-600 text-black bg-opacity-70 px-2 md:px-16'>
             <a
               href='/'
               className="group" 
@@ -47,19 +47,19 @@ export const Navbar = () => {
                   <div className="flex flex-col lg:flex-row items-center justify-center lg:grow">
                     <a
                       href="#"
-                      className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-bold hover:bg-opacity-70 py-5 justify-center"
+                      className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-semibold hover:bg-opacity-70 py-5 justify-center"
                     >
                         Sobre mí
                     </a>
                     <a
                       href="#"
-                      className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-bold hover:bg-opacity-70 py-5 justify-center"
+                      className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-semibold hover:bg-opacity-70 py-5 justify-center"
                     >
                         Proyectos
                     </a>
                     <a
                       href="#"
-                      className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-bold hover:bg-opacity-70 py-5 justify-center"
+                      className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-semibold hover:bg-opacity-70 py-5 justify-center"
                     >
                         Contacto
                     </a>

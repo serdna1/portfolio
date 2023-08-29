@@ -3,7 +3,7 @@ import type { ProjectCardPropType } from "@/types"
 
 export const ProjectCard = ({screenshot, name, description, technologies, deployUrl, repoUrl}: ProjectCardPropType) => {
   return (
-    <article className='group lg:relative lg:hover:scale-105 lg:hover:z-10'>
+    <article className='group lg:relative'>
       <img
         src={screenshot}
         alt="project screenshot"
@@ -36,7 +36,7 @@ export const ProjectCard = ({screenshot, name, description, technologies, deploy
                 href={deployUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className='bg-green-400 hover:bg-opacity-90 hover:font-bold rounded-lg py-2'
+                className='bg-yellow-300 hover:bg-yellow-400 rounded-lg py-2'
               >
                 Visitar
               </a>
@@ -47,14 +47,14 @@ export const ProjectCard = ({screenshot, name, description, technologies, deploy
                 href={repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className='bg-green-400 hover:bg-opacity-90 hover:font-bold rounded-lg py-2'
+                className='bg-yellow-300 hover:bg-yellow-400 rounded-lg py-2'
               >
                 Repositorio
               </a>
           }
           <a
             href=''
-            className='bg-green-400 hover:bg-opacity-90 hover:font-bold rounded-lg py-2'
+            className='bg-yellow-300 hover:bg-yellow-400 rounded-lg py-2'
           >
             Detalles
           </a>
