@@ -5,7 +5,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen px-2 pt-28 pb-8 grid place-items-center bg-white"
+      className="min-h-screen px-2 pt-28 pb-8 grid place-items-center bg-white relative"
     >
       <div className="flex flex-wrap-reverse gap-6 md:gap-24 flex-col-reverse md:flex-row items-center justify-center max-w-4xl">
         <article className="max-w-xl text-center md:text-left">
