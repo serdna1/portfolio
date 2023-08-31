@@ -17,13 +17,16 @@ export interface ProjectCardPropType {
     repoUrl: string;
 }
 
+export interface TechnologyBtnPropType {
+    technology: string
+}
+
 // export interface TechnologiesType{
-//     html: JSX.Element;
-//     css: JSX.Element;
-//     tailwind: JSX.Element;
-//     js: JSX.Element;
-//     ts: JSX.Element;
-//     react: JSX.Element;
-//     next: JSX.Element;
-//     cloudinary: JSX.Element;
+//     HTML: JSX.Element;
+//     CSS: JSX.Element;
+//     Tailwind: JSX.Element;
+//     JavaScript: JSX.Element;
+//     TypeScript: JSX.Element;
+//     React: JSX.Element;
+//     "Next.js": JSX.Element;
 // }
