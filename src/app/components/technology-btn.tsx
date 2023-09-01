@@ -1,13 +1,20 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { technologyIcons } from "./icons"
 import { TechnologyBtnPropType } from "@/types"
+import { useFilters } from "@/hooks/useFilters"
 
 export const TechnologyBtn = ({technology}: TechnologyBtnPropType) => {
-
-  const [isActive, setIsActive] = useState<boolean>(false)
+  const [isActive, setIsActive] = useState<boolean>(technology === 'All Technologies')
+  const { technologyFilter, setTechnologyFilter } = useFilters()
+  
+  useEffect(() => {
+    isActive && (technologyFilter !== technology) && setIsActive(false) 
+  }, [technologyFilter])
+  
   
   const handleClick = () => {
-    setIsActive(!isActive)
+    setIsActive(true)
+    setTechnologyFilter(technology)
   }
   
   return (
