@@ -2,10 +2,11 @@ export interface ProjectType {
     id: number;
     name: string;
     description: string;
-    screenshot: string;
+    screenshots: string[];
     technologies: string[];
     deployUrl: string;
     repoUrl: string;
+    slug: string;
 }
 
 export interface ProjectCardPropType {
@@ -15,6 +16,7 @@ export interface ProjectCardPropType {
     technologies: string[];
     deployUrl: string;
     repoUrl: string;
+    slug: string;
 }
 
 export interface TechnologyBtnPropType {

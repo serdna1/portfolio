@@ -23,12 +23,13 @@ export const Projects = () => {
           filterdProjects.map((project) => (
             <ProjectCard 
               key={project.id}
-              screenshot={project.screenshot}
+              screenshot={project.screenshots[0]}
               name={project.name}
               description={project.description}
               technologies={project.technologies}
               deployUrl={project.deployUrl}
               repoUrl={project.repoUrl}
+              slug={project.slug}
             />
           ))
         }

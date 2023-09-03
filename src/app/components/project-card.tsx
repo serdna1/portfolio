@@ -1,7 +1,7 @@
 import { technologyIcons } from "@/app/components/icons"
 import type { ProjectCardPropType } from "@/types"
 
-export const ProjectCard = ({screenshot, name, description, technologies, deployUrl, repoUrl}: ProjectCardPropType) => {
+export const ProjectCard = ({screenshot, name, description, technologies, deployUrl, repoUrl, slug}: ProjectCardPropType) => {
   return (
     <article className='group lg:relative'>
       <img
@@ -53,7 +53,7 @@ export const ProjectCard = ({screenshot, name, description, technologies, deploy
               </a>
           }
           <a
-            href=''
+            href={`/projects/${slug}`}
             className='bg-yellow-300 hover:bg-yellow-400 rounded-lg py-2'
           >
             Detalles

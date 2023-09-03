@@ -60,21 +60,21 @@ export const Navbar = () => {
                   <div className="flex flex-col lg:flex-row items-center justify-center lg:grow">
                     <a
                       onClick={() => !lg && setDisplayMenu(!displayMenu)}
-                      href="#about"
+                      href="/#about"
                       className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-semibold hover:bg-opacity-70 py-5 justify-center"
                     >
                         Sobre mí
                     </a>
                     <a
                       onClick={() => !lg && setDisplayMenu(!displayMenu)}
-                      href="#projects"
+                      href="/#projects"
                       className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-semibold hover:bg-opacity-70 py-5 justify-center"
                     >
                         Proyectos
                     </a>
                     <a
                       onClick={() => !lg && setDisplayMenu(!displayMenu)}
-                      href="#contact"
+                      href="/#contact"
                       className="flex items-center hover:bg-yellow-300 h-full w-full lg:w-auto px-10 text-2xl font-semibold hover:bg-opacity-70 py-5 justify-center"
                     >
                         Contacto
