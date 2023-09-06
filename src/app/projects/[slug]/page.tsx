@@ -1,7 +1,7 @@
 import { projects } from '@/projects.json'
 import { ReactResponsiveCarousel } from './components/rrc'
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default function ProjectDetails({ params }: { params: { slug: string } }) {
 
   const project = projects.find(project => project.slug === params.slug)
 
