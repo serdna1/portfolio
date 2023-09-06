@@ -1,7 +1,9 @@
 "use client"
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import './rrc.css'
 
 export const ReactResponsiveCarousel = ({images}: {images: string[]}) => {
 
@@ -10,12 +12,14 @@ export const ReactResponsiveCarousel = ({images}: {images: string[]}) => {
       autoPlay 
       interval={3000}
       infiniteLoop
+      // showThumbs={false}
+      className=''
     >
       {
         images.map(image => (
           <div 
             key={image}
-            className="h-auto w-full bg-black"
+            className="h-auto w-full bg-[#dbdbdb] dark:bg-[#111111ff] "
           >
               <img 
                 src={`/${image}`}

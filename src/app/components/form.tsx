@@ -62,7 +62,7 @@ export const Form = () => {
             name="email"
             autoComplete="off"
             required
-            className="p-2 focus:outline-none border-2 border-black bg-transparent focus:bg-white"
+            className="p-2 focus:outline-none focus:outline-green-500 bg-[#f2f2f2ff] dark:focus:outline-red-700 dark:bg-[#1a1a1aff]"
           />
         </div>
         <div className="flex flex-col">
@@ -77,12 +77,12 @@ export const Form = () => {
             id="message"
             name="message"
             required
-            className="p-2 resize-none h-64 focus:outline-none border-2 border-black bg-transparent focus:bg-white"
+            className="p-2 resize-none h-64 focus:outline-none focus:outline-green-500 bg-[#f2f2f2ff] dark:focus:outline-red-700 dark:bg-[#1a1a1aff]"
           />
         </div>
         <button
           type="submit"
-          className="bg-yellow-300 p-2 hover:bg-yellow-400"
+          className="bg-green-400 p-2 hover:bg-green-500 dark:bg-red-600 dark:hover:bg-red-700"
         >
           Enviar
         </button>

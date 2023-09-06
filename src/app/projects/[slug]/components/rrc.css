@@ -1,0 +1,28 @@
+.carousel .thumb:focus {
+  border: 2px solid transparent;
+  outline: none;
+}
+
+.carousel .thumb {
+  border: 2px solid transparent;
+}
+
+.carousel .thumb.selected,
+.carousel .thumb:hover {
+  border: 2px solid rgb(34 197 94);
+}
+
+.dark .carousel .thumb:focus {
+  border: 2px solid transparent;
+  outline: none;
+}
+
+.dark .carousel .thumb {
+  border: 2px solid transparent;
+}
+
+.dark .carousel .thumb.selected,
+.dark .carousel .thumb:hover {
+  border: 2px solid rgb(185 28 28);
+}
+

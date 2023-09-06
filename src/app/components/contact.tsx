@@ -6,7 +6,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-yellow-300 to-green-400 py-10"
+      className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-black py-10"
     >
       <h1 className="text-5xl font-semibold">Contacto</h1>
       <div className="mt-10 md:mt-52 flex gap-16 max-w-5xl w-full px-2 flex-wrap flex-col-reverse md:flex-row">
@@ -14,7 +14,7 @@ export const Contact = () => {
           <h3 className="text-lg font-semibold">
             Encuéntrame
           </h3>
-          <hr  className="border-black mb-2"/>
+          <hr  className="border-black dark:border-white mb-2"/>
           <a
             href={`mailto:${email}`}
             target="_blank"
@@ -37,7 +37,7 @@ export const Contact = () => {
           >
             <div className="flex gap-1 items-center">
               <div className="w-6">
-                <LogosGithubIcon className="grayscale group-hover:grayscale-0"/>
+                <LogosGithubIcon className="grayscale group-hover:grayscale-0 dark:invert"/>
               </div>
               serdna1
             </div>

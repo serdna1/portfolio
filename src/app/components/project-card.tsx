@@ -36,7 +36,7 @@ export const ProjectCard = ({screenshot, name, description, technologies, deploy
                 href={deployUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className='bg-yellow-300 hover:bg-yellow-400 rounded-lg py-2'
+                className='bg-green-400 hover:bg-green-500 dark:bg-red-600 dark:hover:bg-red-700 rounded-lg py-2'
               >
                 Visitar
               </a>
@@ -47,14 +47,14 @@ export const ProjectCard = ({screenshot, name, description, technologies, deploy
                 href={repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className='bg-yellow-300 hover:bg-yellow-400 rounded-lg py-2'
+                className='bg-green-400 hover:bg-green-500 dark:bg-red-600 dark:hover:bg-red-700 rounded-lg py-2'
               >
                 Repositorio
               </a>
           }
           <a
             href={`/projects/${slug}`}
-            className='bg-yellow-300 hover:bg-yellow-400 rounded-lg py-2'
+            className='bg-green-400 hover:bg-green-500 dark:bg-red-600 dark:hover:bg-red-700 rounded-lg py-2'
           >
             Detalles
           </a>

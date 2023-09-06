@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* * {
+  @apply transition-all duration-200;
+} */
+
 /* @layer base {
   * {
     @apply box-border;
