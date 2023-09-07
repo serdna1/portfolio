@@ -1,14 +1,24 @@
 "use client"
 
-import { useTheme } from "@/hooks/useTheme"
+import { useEffect, useState } from "react"
+import { useTheme } from "next-themes"
 
 export const CatImage = () => {
-  const { darkMode } = useTheme()
-  
+  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
   return (
     <img 
-      src={`${(darkMode === true) ? '/artemis.webp' : ''}${(darkMode === false) ? '/luna.webp' : ''}`}
-      alt={`${(darkMode === true) ? 'Artemis' : ''}${(darkMode === false) ? 'Luna' : ''} cat from Sailor Moon`}
+      src={`${(resolvedTheme === 'dark') ? '/artemis.webp' : ''}${(resolvedTheme === 'light') ? '/luna.webp' : ''}`}
+      alt={`${(resolvedTheme === 'dark') ? 'Artemis' : ''}${(resolvedTheme === 'light') ? 'Luna' : ''} cat from Sailor Moon`}
       className="h-full"
     />
   )
