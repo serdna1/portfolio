@@ -1,5 +1,6 @@
 import { projects } from '@/projects.json'
 import { ReactResponsiveCarousel } from './components/rrc'
+import { FillAnchor } from '@/app/components/fill-anchor'
 
 export default function ProjectDetails({ params }: { params: { slug: string } }) {
 
@@ -34,25 +35,23 @@ export default function ProjectDetails({ params }: { params: { slug: string } })
           <div className="flex flex-col gap-2">
           {
             project?.deployUrl &&
-              <a
+              <FillAnchor
                 href={project?.deployUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className='bg-green-400 hover:bg-green-500 dark:bg-red-600 dark:hover:bg-red-700 rounded-lg py-2 text-center'
-              >
-                Visitar
-              </a>
+                text="Visitar"
+                anchorClasses="border-[1px] border-black dark:border-white py-2"
+              />
           }
           {
             project?.repoUrl &&
-              <a
+              <FillAnchor
                 href={project?.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className='bg-green-400 hover:bg-green-500 dark:bg-red-600 dark:hover:bg-red-700 rounded-lg py-2 text-center'
-              >
-                Repositorio
-              </a>
+                text="Repositorio"
+                anchorClasses="border-[1px] border-black dark:border-white py-2"
+              />
           }
           </div>
         </article>

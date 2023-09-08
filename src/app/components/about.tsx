@@ -1,6 +1,7 @@
 import { LogosGoogleGmail, LogosGithubIcon, LogosLinkedinIcon, MaterialSymbolsArrowCircleDownOutlineRounded } from "@/app/components/icons"
 import { email } from "@/config/config"
 import { CatImage } from "./cat-image"
+import { FillAnchor } from "./fill-anchor"
 
 export const About = () => {
   return (
@@ -20,14 +21,12 @@ export const About = () => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor nobis recusandae tempora nemo aut culpa iure incidunt quibusdam dicta mollitia. Optio doloremque culpa nemo eos, dolorem debitis pariatur consectetur error?
           </p>
           <div className="mt-6 flex flex-wrap gap-6 items-center justify-center md:justify-normal">
-            <a 
-              className="border-2 border-black dark:border-white group relative overflow-hidden p-4 rounded-full font-semibold text-center w-full md:w-52"
+            <FillAnchor
               href="/cv.pdf"
               download="andres_otero_cv.pdf"
-            >
-              <div className="absolute inset-0 w-0 bg-green-400 dark:bg-red-600 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-              <span className="relative">Descargar CV</span>
-            </a>
+              text="Descargar CV"
+              anchorClasses="border-2 border-black dark:border-white md:w-52 p-4"
+            />
             <div className="flex gap-6">
               <a 
                 className="grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"

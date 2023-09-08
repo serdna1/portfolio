@@ -1,7 +1,11 @@
 import { technologyIcons } from "@/app/components/icons"
 import type { ProjectCardPropType } from "@/types"
+import { FillAnchor } from "./fill-anchor"
 
 export const ProjectCard = ({screenshot, name, description, technologies, deployUrl, repoUrl, slug}: ProjectCardPropType) => {
+
+  const anchorClasses="border-[1px] border-black dark:border-white lg:border-white lg:text-white lg:hover:text-black dark:lg:hover:text-white py-2 lg:transition-colors lg:duration-[400ms] lg:ease-out"
+
   return (
     <article className='group lg:relative border-[1px] border-[#eaeaeaff] dark:border-[#333333ff] rounded-xl overflow-hidden bg-white dark:bg-black shadow hover:shadow-lg dark:shadow-white/10'>
       <a href={`/projects/${slug}`}>
@@ -34,32 +38,31 @@ export const ProjectCard = ({screenshot, name, description, technologies, deploy
         <div className='flex gap-1 flex-col justify-end'>
           {
             deployUrl &&
-              <a
+              <FillAnchor
                 href={deployUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className='bg-green-400 hover:bg-green-500 dark:bg-red-600 dark:hover:bg-red-700 rounded-lg py-2'
-              >
-                Visitar
-              </a>
+                text="Visitar"
+                anchorClasses={anchorClasses}
+              />
           }
           {
             repoUrl &&
-              <a
+              <FillAnchor
                 href={repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className='bg-green-400 hover:bg-green-500 dark:bg-red-600 dark:hover:bg-red-700 rounded-lg py-2'
-              >
-                Repositorio
-              </a>
+                text="Repositorio"
+                anchorClasses={anchorClasses}
+              />
           }
-          <a
+          <FillAnchor
             href={`/projects/${slug}`}
-            className='bg-green-400 hover:bg-green-500 dark:bg-red-600 dark:hover:bg-red-700 rounded-lg py-2'
-          >
-            Detalles
-          </a>
+            target="_blank"
+            rel="noopener noreferrer"
+            text="Detalles"
+            anchorClasses={anchorClasses}
+          />
         </div>
       </section>
     </article>
