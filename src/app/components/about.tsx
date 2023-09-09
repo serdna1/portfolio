@@ -29,19 +29,19 @@ export const About = () => {
             />
             <div className="flex gap-6">
               <a 
-                className="grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
+                className="grayscale-0 lg:grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
                 href={`mailto:${email}`}
               >
                 <LogosGoogleGmail className="text-4xl"/>
               </a>
               <a 
-                className="grayscale hover:grayscale-0 hover:scale-110 cursor-pointer dark:invert"
+                className="grayscale-0 lg:grayscale hover:grayscale-0 hover:scale-110 cursor-pointer dark:invert"
                 href="https://github.com/serdna1"
               >
                 <LogosGithubIcon className="text-4xl"/>
               </a>
               <a 
-                className="grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
+                className="grayscale-0 lg:grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
                 href="https://www.linkedin.com/in/andrés-c-bb752a178"
               >
                 <LogosLinkedinIcon className="text-4xl"/>

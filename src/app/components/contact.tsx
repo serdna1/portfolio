@@ -19,11 +19,11 @@ export const Contact = () => {
             href={`mailto:${email}`}
             target="_blank"
             rel="noopener noreferrer"
-            className='group hover:underline hover:text-red-500 inline-block'
+            className='group hover:underline text-red-500 lg:text-inherit hover:text-red-500 inline-block'
           >
             <div className="flex gap-1 items-center">
               <div className="w-6">
-                <LogosGoogleGmail className="grayscale group-hover:grayscale-0"/>
+                <LogosGoogleGmail className="grayscale-0 lg:grayscale group-hover:grayscale-0"/>
               </div>
               {email}
             </div>
@@ -37,7 +37,7 @@ export const Contact = () => {
           >
             <div className="flex gap-1 items-center">
               <div className="w-6">
-                <LogosGithubIcon className="grayscale group-hover:grayscale-0 dark:invert"/>
+                <LogosGithubIcon className="grayscale-0 lg:grayscale group-hover:grayscale-0 dark:invert"/>
               </div>
               serdna1
             </div>
@@ -47,11 +47,11 @@ export const Contact = () => {
             href="https://www.linkedin.com/in/serdna1/"
             target="_blank"
             rel="noopener noreferrer"
-            className='group hover:underline hover:text-blue-600 inline-block'
+            className='group hover:underline text-blue-600 lg:text-inherit hover:text-blue-600 inline-block'
           >
             <div className="flex gap-1 items-center">
               <div className="w-6">
-                <LogosLinkedinIcon className="grayscale group-hover:grayscale-0"/>
+                <LogosLinkedinIcon className="grayscale-0 lg:grayscale group-hover:grayscale-0"/>
               </div>
               serdna1
             </div>
