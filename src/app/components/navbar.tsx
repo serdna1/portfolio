@@ -52,7 +52,7 @@ export const Navbar = () => {
               <img
                 src="/luna-artemis.webp"
                 alt="luna and artemis, yin and yan"
-                className="h-16 group-hover:animate-spin"
+                className="w-16 group-hover:animate-spin"
               />
             </a>
             {
