@@ -17,7 +17,7 @@ export const ProjectCard = ({screenshot, name, description, technologies, deploy
       </a>
       <section className='lg:bg-black/70 lg:absolute lg:top-0 w-full lg:h-full lg:hidden lg:group-hover:flex flex flex-col justify-center text-center p-2 gap-4'>
         <div className='flex flex-col justify-center grow gap-4'>
-          <header className='text-black dark:text-white lg:text-white text-xl font-semibold'>
+          <header className='text-black dark:text-white lg:text-white text-3xl font-semibold'>
             {name}
           </header>
           <p className='text-black dark:text-white lg:text-white'>

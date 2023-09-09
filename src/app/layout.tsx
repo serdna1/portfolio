@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { dancingScript, roboto_mono } from '@/fonts'
 import { ThemeProvider } from '@/context/theme'
 import { Navbar } from '@/app/components/navbar'
 
@@ -14,7 +15,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html 
       lang="es"
       suppressHydrationWarning
-      className='scroll-smooth'
+      className={`scroll-smooth ${dancingScript.variable} ${roboto_mono.variable} font-roboto-mono`}
     >
       <body className='dark:text-white'>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
