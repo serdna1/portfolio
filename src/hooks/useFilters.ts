@@ -2,12 +2,12 @@
 
 import { useContext } from 'react'
 import { FiltersContext } from '@/context/filters'
-import { ProjectType } from '@/types'
+import { CardProjectWithIdType } from '@/types'
 
 export function useFilters () {
   const [ technologyFilter, setTechnologyFilter ] = useContext(FiltersContext)
 
-  const filterByTechnology = (projects: ProjectType[]) => {
+  const filterByTechnology = (projects: CardProjectWithIdType[]) => {
     if (technologyFilter === 'All Technologies')
       return projects
 
