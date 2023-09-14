@@ -22,7 +22,7 @@ export const Form = () => {
       message: formData.message,
     }
 
-    const promise = fetch('/contact', {
+    const promise = fetch('/api/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

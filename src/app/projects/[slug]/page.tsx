@@ -1,24 +1,58 @@
-import { projects } from '@/projects.json'
+import { getHost } from '@/config/config'
 import { ReactResponsiveCarousel } from './components/rrc'
 import { FillAnchor } from '@/app/components/fill-anchor'
+import { DetailsProjectType } from '@/types'
 
-export default function ProjectDetails({ params }: { params: { slug: string } }) {
+async function getProject({slug}: {slug: string}) {
+  const res = await fetch(`${getHost()}/api/projects/${slug}`, { cache: 'no-store' })
+ 
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
 
-  const project = projects.find(project => project.slug === params.slug)
+  const json = await res.json()
+
+  const project = {
+    name: json.project_name,
+    carouselScreenshots: json.carouselScreenshots,
+    technologies: json.technologies,
+    deployUrl: json.deploy_url,
+    repoUrl: json.repo_url,
+    longDescription: json.long_description
+  }
+ 
+  return project
+}
+
+async function getSlugs() {
+  const res = await fetch(`${getHost()}/api/slugs`, { cache: 'no-store' })
+ 
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+
+  const json = await res.json()
+ 
+  return json
+}
+
+export default async function ProjectDetails({ params }: { params: { slug: string } }) {
+
+  const project: DetailsProjectType = await getProject({slug: params.slug})
 
   return (
     <main className='pt-20 lg:pt-32 bg-white dark:bg-black min-h-screen flex justify-center'>
       <div className='flex justify-center items-center lg:items-start gap-4 lg:gap-20 flex-col lg:flex-row pb-10 max-w-6xl lg:px-2'>
         { 
-          project?.screenshots &&
-            <ReactResponsiveCarousel images={project.screenshots} />
+          project?.carouselScreenshots &&
+            <ReactResponsiveCarousel images={project.carouselScreenshots} />
         }
-        <article className="px-2 lg:px-0 lg:max-w-lg">
+        <article className="px-2 lg:px-0 w-full lg:w-1/2">
           <h1 className="text-4xl text-green-600 dark:text-red-800 font-semibold mb-8">
             {project?.name}
           </h1>
           <p className="mb-8 whitespace-pre-wrap">
-            {project?.longDeascription}
+            {project?.longDescription}
           </p>
           <div className="flex flex-wrap gap-4 mb-8">
             {
@@ -61,8 +95,10 @@ export default function ProjectDetails({ params }: { params: { slug: string } })
 }
 
 export async function generateStaticParams() {
+
+  const slugs: string[] = await getSlugs()
   
-  return projects.map((project) => ({
-    slug: project.slug,
+  return slugs.map(slug => ({
+    slug,
   }))
 }

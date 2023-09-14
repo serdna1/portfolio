@@ -1,34 +1,26 @@
-export interface ProjectType {
-    id: number;
+export interface CardProjectType {
     name: string;
     description: string;
-    screenshots: string[];
+    thumbnail: string;
     technologies: string[];
     deployUrl: string;
     repoUrl: string;
     slug: string;
 }
 
-export interface ProjectCardPropType {
+export interface CardProjectWithIdType extends CardProjectType {
+    id: number;
+}
+
+export interface DetailsProjectType {
     name: string;
-    description: string;
-    screenshot: string;
+    carouselScreenshots: string[];
     technologies: string[];
     deployUrl: string;
     repoUrl: string;
-    slug: string;
+    longDescription: string;
 }
 
 export interface TechnologyBtnPropType {
     technology: string
 }
-
-// export interface TechnologiesType{
-//     HTML: JSX.Element;
-//     CSS: JSX.Element;
-//     Tailwind: JSX.Element;
-//     JavaScript: JSX.Element;
-//     TypeScript: JSX.Element;
-//     React: JSX.Element;
-//     "Next.js": JSX.Element;
-// }

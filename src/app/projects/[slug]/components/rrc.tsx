@@ -12,8 +12,7 @@ export const ReactResponsiveCarousel = ({images}: {images: string[]}) => {
       autoPlay 
       interval={3000}
       infiniteLoop
-      // showThumbs={false}
-      className=''
+      className='lg:w-1/2'
     >
       {
         images.map(image => (
@@ -22,7 +21,7 @@ export const ReactResponsiveCarousel = ({images}: {images: string[]}) => {
             className="h-auto w-full bg-[#dbdbdb] dark:bg-[#111111ff] "
           >
               <img 
-                src={`/${image}`}
+                src={image}
                 className="object-contain h-full aspect-video"
                 />
           </div>

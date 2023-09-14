@@ -1,12 +1,6 @@
-import { projects } from '@/projects.json'
 import { TechnologyBtn } from "./technology-btn";
 
-const uniqueTechnologies: string[] = [
-  'All Technologies',
-  ...new Set(projects.map(p => p.technologies).flat())
-]
-
-export const Filters = () => {
+export const Filters = ({uniqueTechnologies}: {uniqueTechnologies: string[]}) => {
   
   return (
     <section className="flex justify-center gap-4 max-w-lg flex-wrap items-center">

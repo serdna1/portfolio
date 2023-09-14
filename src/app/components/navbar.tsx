@@ -83,9 +83,9 @@ export const Navbar = () => {
                   </div>
                   <div className="flex items-center justify-center gap-4 py-5">
                     <ThemeBtn />
-                    <button className="opacity-80 hover:opacity-100 hover:scale-110">
+                    {/* <button className="opacity-80 hover:opacity-100 hover:scale-110">
                       <MaterialSymbolsLanguage className="text-5xl"/>
-                    </button>
+                    </button> */}
                   </div>
                 </div>
             }

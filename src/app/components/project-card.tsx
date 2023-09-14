@@ -1,8 +1,8 @@
 import { technologyIcons } from "@/app/components/icons"
-import type { ProjectCardPropType } from "@/types"
+import type { CardProjectType } from "@/types"
 import { FillAnchor } from "./fill-anchor"
 
-export const ProjectCard = ({screenshot, name, description, technologies, deployUrl, repoUrl, slug}: ProjectCardPropType) => {
+export const ProjectCard = ({thumbnail, name, description, technologies, deployUrl, repoUrl, slug}: CardProjectType) => {
 
   const anchorClasses="border-[1px] border-black dark:border-white lg:border-white lg:text-white lg:hover:text-black dark:lg:hover:text-white py-2 lg:transition-colors lg:duration-[400ms] lg:ease-out"
 
@@ -10,7 +10,7 @@ export const ProjectCard = ({screenshot, name, description, technologies, deploy
     <article className='group lg:relative border-[1px] border-[#eaeaeaff] dark:border-[#333333ff] rounded-xl overflow-hidden bg-white dark:bg-black shadow hover:shadow-lg dark:shadow-white/10'>
       <a href={`/projects/${slug}`}>
         <img
-          src={screenshot}
+          src={thumbnail}
           alt="project screenshot"
           className='aspect-square object-cover lg:group-hover:grayscale'
         />
