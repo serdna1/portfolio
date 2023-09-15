@@ -1,44 +1,10 @@
-import { getHost } from '@/config/config'
 import { ReactResponsiveCarousel } from './components/rrc'
 import { FillAnchor } from '@/app/components/fill-anchor'
-import { DetailsProjectType } from '@/types'
-
-async function getProject({slug}: {slug: string}) {
-  const res = await fetch(`${getHost()}/api/projects/${slug}`, { cache: 'no-store' })
- 
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
-
-  const json = await res.json()
-
-  const project = {
-    name: json.project_name,
-    carouselScreenshots: json.carouselScreenshots,
-    technologies: json.technologies,
-    deployUrl: json.deploy_url,
-    repoUrl: json.repo_url,
-    longDescription: json.long_description
-  }
- 
-  return project
-}
-
-async function getSlugs() {
-  const res = await fetch(`${getHost()}/api/slugs`, { cache: 'no-store' })
- 
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
-
-  const json = await res.json()
- 
-  return json
-}
+import { getProject } from '@/lib/db-queries'
 
 export default async function ProjectDetails({ params }: { params: { slug: string } }) {
 
-  const project: DetailsProjectType = await getProject({slug: params.slug})
+  const project = await getProject({slug: params.slug})
 
   return (
     <main className='pt-20 lg:pt-32 bg-white dark:bg-black min-h-screen flex justify-center'>
@@ -92,13 +58,4 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
       </div>
     </main>
   )  
-}
-
-export async function generateStaticParams() {
-
-  const slugs: string[] = await getSlugs()
-  
-  return slugs.map(slug => ({
-    slug,
-  }))
 }

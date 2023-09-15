@@ -1,33 +1,9 @@
-import { getHost } from '@/config/config'
 import { Filters } from './filters'
 import { ProjectsClient } from "./projects-client"
-import { CardProjectWithIdType } from '@/types'
-
-async function getProjects() {
-  const res = await fetch(`${getHost()}/api/projects`, { cache: 'no-store' })
- 
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
-
-  const json = await res.json()
-
-  const projects = json.map((element: any) => ({
-    id: element.project_id,
-    thumbnail: element.url,
-    name: element.project_name,
-    description: element.project_description,
-    technologies: element.technologies,
-    deployUrl: element.deploy_url,
-    repoUrl: element.repo_url,
-    slug: element.slug
-  }))
- 
-  return projects
-}
+import { getProjects } from '@/lib/db-queries'
 
 export const ProjectsServer = async () => {
-  const projects: CardProjectWithIdType[] = await getProjects()
+  const projects = await getProjects()
 
   const uniqueTechnologies: string[] = [
     'All Technologies',
