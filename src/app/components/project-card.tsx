@@ -26,7 +26,11 @@ export const ProjectCard = ({thumbnail, name, description, technologies, deployU
           <div className='flex justify-center gap-2 text-3xl'>
             {
               technologies.map((technology) => (
-                <div key={technology} title={technology}>
+                <div
+                  key={technology}
+                  title={technology}
+                  className="lg:text-white"
+                >
                   {
                     (technologyIcons as any)[technology]
                   }
