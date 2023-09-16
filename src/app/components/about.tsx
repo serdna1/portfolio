@@ -15,11 +15,19 @@ export const About = () => {
             Hola, soy Andrés
           </h1>
           <h2 className="text-green-600 dark:text-red-800 mt-2 text-4xl font-semibold">
-            Desarrollador Front-End
+            Desarrollador Full-Stack
           </h2>
-          <p className="mt-6">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor nobis recusandae tempora nemo aut culpa iure incidunt quibusdam dicta mollitia. Optio doloremque culpa nemo eos, dolorem debitis pariatur consectetur error?
-          </p>
+          <div className="mt-6 flex flex-col gap-4">
+            <p>
+              Apasionado autodidacta, finalizando el grado de Ingeniería Informática. 
+            </p>
+            <p>
+              Comunicativo, con iniciativa, versátil y perseverante.
+            </p>
+            <p>
+              He creado múltiples aplicaciones web con diferentes tecnologías (React, Next.js, Tailwind, MySQL, ...) y participé en una hackathon.
+            </p>
+          </div>
           <div className="mt-6 flex flex-wrap gap-6 items-center justify-center md:justify-normal">
             <FillAnchor
               href="/cv.pdf"
