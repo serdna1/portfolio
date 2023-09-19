@@ -1,8 +1,9 @@
-import { prisma } from "@/config/prisma";
+import { cache } from 'react'
+import { prisma } from "@/config/prisma"
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
-export async function getProjects() {
+export const getProjects = cache(async ()  => {
   try{
     const projects = await prisma.project.findMany({
       select: {
@@ -27,4 +28,4 @@ export async function getProjects() {
 
     return []
   }
-}
+})
