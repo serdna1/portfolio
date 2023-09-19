@@ -2,7 +2,7 @@ import { technologyIcons } from "@/app/components/icons"
 import type { CardProjectType } from "@/types"
 import { FillAnchor } from "./fill-anchor"
 
-export const ProjectCard = ({thumbnail, name, description, technologies, deployUrl, repoUrl, slug}: CardProjectType) => {
+export const ProjectCard = ({thumbnailURL, name, description, technologies, deployURL, repoURL, slug}: CardProjectType) => {
 
   const anchorClasses="border-[1px] border-black dark:border-white lg:border-white lg:text-white lg:hover:text-black dark:lg:hover:text-white py-2 lg:transition-colors lg:duration-[400ms] lg:ease-out"
 
@@ -10,7 +10,7 @@ export const ProjectCard = ({thumbnail, name, description, technologies, deployU
     <article className='group lg:relative border-[1px] border-[#eaeaeaff] dark:border-[#333333ff] rounded-xl overflow-hidden bg-white dark:bg-black shadow hover:shadow-lg dark:shadow-white/10'>
       <a href={`/projects/${slug}`}>
         <img
-          src={thumbnail}
+          src={thumbnailURL}
           alt="project screenshot"
           className='aspect-square object-cover lg:group-hover:grayscale'
         />
@@ -27,12 +27,12 @@ export const ProjectCard = ({thumbnail, name, description, technologies, deployU
             {
               technologies.map((technology) => (
                 <div
-                  key={technology}
-                  title={technology}
+                  key={technology.name}
+                  title={technology.name}
                   className="lg:text-white"
                 >
                   {
-                    (technologyIcons as any)[technology]
+                    (technologyIcons as any)[technology.name]
                   }
                 </div>
               ))
@@ -41,9 +41,9 @@ export const ProjectCard = ({thumbnail, name, description, technologies, deployU
         </div>
         <div className='flex gap-1 flex-col justify-end'>
           {
-            deployUrl &&
+            deployURL &&
               <FillAnchor
-                href={deployUrl}
+                href={deployURL}
                 target="_blank"
                 rel="noopener noreferrer"
                 text="Visitar"
@@ -51,9 +51,9 @@ export const ProjectCard = ({thumbnail, name, description, technologies, deployU
               />
           }
           {
-            repoUrl &&
+            repoURL &&
               <FillAnchor
-                href={repoUrl}
+                href={repoURL}
                 target="_blank"
                 rel="noopener noreferrer"
                 text="Repositorio"

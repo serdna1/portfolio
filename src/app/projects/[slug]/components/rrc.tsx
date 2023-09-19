@@ -22,8 +22,9 @@ export const ReactResponsiveCarousel = ({images}: {images: string[]}) => {
           >
               <img 
                 src={image}
+                alt='image from carousel'
                 className="object-contain h-full aspect-video"
-                />
+              />
           </div>
         ))
       }

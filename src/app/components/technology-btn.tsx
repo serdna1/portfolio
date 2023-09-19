@@ -2,10 +2,9 @@
 
 import { useEffect, useState } from "react"
 import { technologyIcons } from "./icons"
-import { TechnologyBtnPropType } from "@/types"
 import { useFilters } from "@/hooks/useFilters"
 
-export const TechnologyBtn = ({technology}: TechnologyBtnPropType) => {
+export const TechnologyBtn = ({technology}: {technology: string}) => {
   const [isActive, setIsActive] = useState<boolean>(technology === 'All Technologies')
   const { technologyFilter, setTechnologyFilter } = useFilters()
   

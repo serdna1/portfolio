@@ -11,7 +11,7 @@ export function useFilters () {
     if (technologyFilter === 'All Technologies')
       return projects
 
-    return projects.filter(project => project.technologies.includes(technologyFilter))
+    return projects.filter(project => project.technologies.some(technology => (technology.name === technologyFilter)))
   }
 
   return { technologyFilter, filterByTechnology, setTechnologyFilter }

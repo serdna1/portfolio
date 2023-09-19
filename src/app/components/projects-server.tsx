@@ -1,13 +1,13 @@
 import { Filters } from './filters'
 import { ProjectsClient } from "./projects-client"
-import { getProjects } from '@/lib/db-queries'
+import { getProjects } from '@/lib/projects'
 
 export const ProjectsServer = async () => {
   const projects = await getProjects()
 
-  const uniqueTechnologies: string[] = [
+  const uniqueTechnologies = [
     'All Technologies',
-    ...new Set(projects.map(p => p.technologies).flat())
+    ...new Set(projects.map(project => project.technologies).map(technologies => technologies.map(technology => Object.values(technology))).flat(2))
   ]
 
   return (

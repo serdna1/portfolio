@@ -1,26 +1,6 @@
-export interface CardProjectType {
-    name: string;
-    description: string;
-    thumbnail: string;
-    technologies: string[];
-    deployUrl: string;
-    repoUrl: string;
-    slug: string;
-}
+import { Prisma } from '@prisma/client'
+import { getProjects } from './lib/projects'
 
-export interface CardProjectWithIdType extends CardProjectType {
-    id: number;
-}
+export type CardProjectWithIdType = Prisma.PromiseReturnType<typeof getProjects>[0]
 
-export interface DetailsProjectType {
-    name: string;
-    carouselScreenshots: string[];
-    technologies: string[];
-    deployUrl: string;
-    repoUrl: string;
-    longDescription: string;
-}
-
-export interface TechnologyBtnPropType {
-    technology: string
-}
+export type CardProjectType = Omit<CardProjectWithIdType, 'id'>;

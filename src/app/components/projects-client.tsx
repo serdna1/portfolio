@@ -16,12 +16,12 @@ export const ProjectsClient = ({initialProjects}: {initialProjects: CardProjectW
         filterdProjects.map((project) => (
           <ProjectCard 
             key={project.id}
-            thumbnail={project.thumbnail}
+            thumbnailURL={project.thumbnailURL}
             name={project.name}
             description={project.description}
             technologies={project.technologies}
-            deployUrl={project.deployUrl}
-            repoUrl={project.repoUrl}
+            deployURL={project.deployURL}
+            repoURL={project.repoURL}
             slug={project.slug}
           />
         ))
