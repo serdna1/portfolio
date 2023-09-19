@@ -1,6 +1,6 @@
 import { ReactResponsiveCarousel } from './components/rrc'
 import { FillAnchor } from '@/app/components/fill-anchor'
-import { getProject } from '@/lib/project'
+import { getProject } from '@/lib/get-project'
 
 const des = 'dasda\ndfdsfsd'
 

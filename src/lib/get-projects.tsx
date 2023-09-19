@@ -1,5 +1,7 @@
 import { prisma } from "@/config/prisma";
 
+export const dynamic = 'force-dynamic'
+
 export async function getProjects() {
   try{
     const projects = await prisma.project.findMany({

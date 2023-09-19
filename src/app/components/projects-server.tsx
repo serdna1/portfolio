@@ -1,6 +1,6 @@
 import { Filters } from './filters'
 import { ProjectsClient } from "./projects-client"
-import { getProjects } from '@/lib/projects'
+import { getProjects } from '@/lib/get-projects'
 
 export const ProjectsServer = async () => {
   const projects = await getProjects()
