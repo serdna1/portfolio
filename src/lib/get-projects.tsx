@@ -1,7 +1,7 @@
 import { cache } from 'react'
 import { prisma } from "@/config/prisma"
 
-export const revalidate = 0
+export const revalidate = 20
 
 export const getProjects = cache(async ()  => {
   try{
