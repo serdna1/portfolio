@@ -1,9 +1,6 @@
-import { cache } from 'react'
 import { prisma } from "@/config/prisma"
 
-export const revalidate = 20
-
-export const getProjects = cache(async ()  => {
+export const getProjects = async () => {
   try{
     const projects = await prisma.project.findMany({
       select: {
@@ -28,4 +25,4 @@ export const getProjects = cache(async ()  => {
 
     return []
   }
-})
+}
