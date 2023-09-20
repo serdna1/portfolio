@@ -2,30 +2,30 @@ import { About } from "@/app/components/about";
 import { Contact } from "./components/contact";
 import { FiltersProvider } from "@/context/filters";
 // import { ProjectsServer } from "./components/projects-server";
-// import { prisma } from "@/config/prisma";
-import { getProjects } from "@/lib/get-projects";
+import { prisma } from "@/config/prisma";
+// import { getProjects } from "@/lib/get-projects";
 
-// export const dynamic = 'force-dynamic'
+export const dynamic = 'force-dynamic'
 
 export default async function Home() {
-  const projects = await getProjects()
+  // const projects = await getProjects()
 
-  // const projects = await prisma.project.findMany({
-  //   select: {
-  //     id: true,
-  //     thumbnailURL: true,
-  //     name: true,
-  //     description: true,
-  //     technologies: {
-  //       select: {
-  //         name: true,
-  //       }
-  //     },
-  //     deployURL: true,
-  //     repoURL: true,
-  //     slug: true
-  //   }
-  // })
+  const projects = await prisma.project.findMany({
+    select: {
+      id: true,
+      thumbnailURL: true,
+      name: true,
+      description: true,
+      technologies: {
+        select: {
+          name: true,
+        }
+      },
+      deployURL: true,
+      repoURL: true,
+      slug: true
+    }
+  })
   
   return (
     <main>
