@@ -8,6 +8,7 @@ export const Form = () => {
     email: '',
     message: ''
   })
+  const [loading, setLoading] = useState(false)
 
   const onFieldChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const value: typeof formData[keyof typeof formData] = event.target.value
@@ -16,6 +17,8 @@ export const Form = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+
+    setLoading(true)
 
     const body = {
       email: formData.email,
@@ -38,6 +41,7 @@ export const Form = () => {
         return 'Formulario de contacto enviado';
       },
       error: 'Error al enviar el formulario de contacto',
+      finally: () => setLoading(false),
     })
 
   }
@@ -82,7 +86,8 @@ export const Form = () => {
         </div>
         <button
           type="submit"
-          className="bg-green-400 p-2 hover:bg-green-500 dark:bg-red-600 dark:hover:bg-red-700"
+          disabled={loading}
+          className='bg-green-400 p-2 dark:bg-red-600 enabled:hover:bg-green-500 enabled:dark:hover:bg-red-700 disabled:opacity-50 disabled:cursor-wait'
         >
           Enviar
         </button>
