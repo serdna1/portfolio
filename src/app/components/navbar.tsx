@@ -48,7 +48,7 @@ export const Navbar = () => {
             </div>
             {
               displayMenu &&
-                <div className="lg:hidden w-full absolute left-0 top-20 flex flex-col min-h-screen bg-green-300/80 dark:bg-red-500/80 backdrop-blur">
+                <div className="lg:hidden w-full absolute left-0 top-20 flex flex-col h-[calc(100vh-5rem)] bg-green-300/80 dark:bg-red-500/80 backdrop-blur overflow-scroll">
                   <div className="flex justify-center gap-4 py-5">
                     <ThemeBtn />
                     {/* <button className="opacity-80 hover:opacity-100 hover:scale-110">
