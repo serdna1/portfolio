@@ -30,8 +30,8 @@ export const About = () => {
           </div>
           <div className="mt-6 flex flex-wrap gap-6 items-center justify-center md:justify-normal">
             <FillAnchor
-              href="/cv.pdf"
-              download="andres_otero_cv.pdf"
+              href="/andres_otero_cv.pdf"
+              download
               text="Descargar CV"
               anchorClasses="border-2 border-black dark:border-white md:w-52 p-4"
             />
