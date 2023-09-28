@@ -39,12 +39,12 @@ export const Contact = () => {
               <div className="w-6">
                 <LogosGithubIcon className="grayscale-0 lg:grayscale group-hover:grayscale-0 dark:invert"/>
               </div>
-              serdna1
+              github.com/serdna1
             </div>
           </a>
           <br />
           <a
-            href="https://www.linkedin.com/in/serdna1/"
+            href="https://www.linkedin.com/in/andres-otero-dev/"
             target="_blank"
             rel="noopener noreferrer"
             className='group hover:underline text-blue-600 lg:text-inherit hover:text-blue-600 inline-block'
@@ -53,7 +53,7 @@ export const Contact = () => {
               <div className="w-6">
                 <LogosLinkedinIcon className="grayscale-0 lg:grayscale group-hover:grayscale-0"/>
               </div>
-              serdna1
+              /in/andres-otero-dev/
             </div>
           </a>
         </article>

@@ -15,7 +15,7 @@ export const About = () => {
             Hola, soy Andrés
           </h1>
           <h2 className="text-green-600 dark:text-red-800 mt-2 text-4xl font-semibold">
-            Desarrollador Full-Stack
+            Desarrollador Web
           </h2>
           <div className="mt-6 flex flex-col gap-4">
             <p>
@@ -30,27 +30,33 @@ export const About = () => {
           </div>
           <div className="mt-6 flex flex-wrap gap-6 items-center justify-center md:justify-normal">
             <FillAnchor
-              href="/andres_otero_cv.pdf"
+              href="/andres-otero-cv.pdf"
               download
               text="Descargar CV"
               anchorClasses="border-2 border-black dark:border-white md:w-52 p-4"
             />
             <div className="flex gap-6">
               <a 
-                className="grayscale-0 lg:grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
                 href={`mailto:${email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grayscale-0 lg:grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
               >
                 <LogosGoogleGmail className="text-4xl"/>
               </a>
               <a 
-                className="grayscale-0 lg:grayscale hover:grayscale-0 hover:scale-110 cursor-pointer dark:invert"
                 href="https://github.com/serdna1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grayscale-0 lg:grayscale hover:grayscale-0 hover:scale-110 cursor-pointer dark:invert"
               >
                 <LogosGithubIcon className="text-4xl"/>
               </a>
               <a 
+                href="https://www.linkedin.com/in/andres-otero-dev/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="grayscale-0 lg:grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
-                href="https://www.linkedin.com/in/andrés-c-bb752a178"
               >
                 <LogosLinkedinIcon className="text-4xl"/>
               </a>
