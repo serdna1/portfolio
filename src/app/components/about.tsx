@@ -15,17 +15,14 @@ export const About = () => {
             Hola, soy Andrés
           </h1>
           <h2 className="text-green-600 dark:text-red-800 mt-2 text-4xl font-semibold">
-            Desarrollador Web
+            Software Engineer / Data Scientist
           </h2>
           <div className="mt-6 flex flex-col gap-4">
             <p>
-              Apasionado autodidacta, finalizando el grado de Ingeniería Informática. 
+              Apasionado autodidacta graduado en Ingeniería Informática. Mis dos intereses principales son el desarrollo de aplicaciones web y la experimentación con modelos de deep learning.
             </p>
             <p>
-              Comunicativo, con iniciativa, versátil y perseverante.
-            </p>
-            <p>
-              He creado múltiples aplicaciones web con diferentes tecnologías (React, Next.js, Tailwind, MySQL, ...) y participé en una hackathon.
+              Me considero una persona comunicativa, con iniciativa, versátil y perseverante. Participante en hackathones de desarrollo de aplicaciones y challenges de machine learning.
             </p>
           </div>
           <div className="mt-6 flex flex-wrap gap-6 items-center justify-center md:justify-normal">
