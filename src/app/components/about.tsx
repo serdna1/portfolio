@@ -27,7 +27,7 @@ export const About = () => {
           </div>
           <div className="mt-6 flex flex-wrap gap-6 items-center justify-center md:justify-normal">
             <FillAnchor
-              href="/andres-otero-cv.pdf"
+              href="/andres-campaña-otero.pdf"
               download
               text="Descargar CV"
               anchorClasses="border-2 border-black dark:border-white md:w-52 p-4"
