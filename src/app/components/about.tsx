@@ -19,10 +19,10 @@ export const About = () => {
           </h2>
           <div className="mt-6 flex flex-col gap-4">
             <p>
-              Apasionado autodidacta graduado en Ingeniería Informática. Mis dos intereses principales son el desarrollo de aplicaciones web y la experimentación con modelos de deep learning.
+              Ingeniero informático con más de dos años de experiencia en desarrollo web y en el entrenamiento de modelos de Deep Learning.
             </p>
             <p>
-              Me considero una persona comunicativa, con iniciativa, versátil y perseverante. Participante en hackathones de desarrollo de aplicaciones y challenges de machine learning.
+              Soy un profesional proactivo, versátil y perseverante, con un enfoque práctico para resolver problemas. Mis proyectos reflejan mi capacidad para combinar el desarrollo full-stack con la inteligencia artificial.
             </p>
           </div>
           <div className="mt-6 flex flex-wrap gap-6 items-center justify-center md:justify-normal">
